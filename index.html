@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#101923">
+  <title>Viver em Angola — Protótipo 3D</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./css/style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="game">
+    <div id="loading">A preparar Luanda…</div>
+    <div id="hud">
+      <div class="brand"><span class="logo-emblem"><b>V</b><i>A</i><small>✦</small></span><div><b>VIVER EM ANGOLA</b><small>O TEU MUNDO COMEÇA AQUI</small></div></div>
+      <div class="mission"><small>ATIVIDADE</small><b id="missionText">Explora a cidade</b><span id="distanceText">Encontra o marcador dourado</span></div>
+      <div class="help" id="helpText">WASD mover · rato olhar · Shift correr</div>
+    </div>
+    <div id="crosshair"><i></i><i></i></div>
+    <div id="message" aria-live="polite"></div>
+    <div id="startPanel">
+      <div class="panel-card">
+        <div class="splash-logo"><span class="logo-emblem large"><b>V</b><i>A</i><small>✦</small></span><span>VIVER EM ANGOLA</span></div>
+        <div class="eyebrow">BEM-VINDO A LUANDA</div>
+        <h1>Viver em<br><em>Angola.</em></h1>
+        <p>Explora uma pequena zona urbana em primeira pessoa. Este é o primeiro protótipo: a cidade ainda vai crescer.</p>
+        <button id="startButton">ENTRAR NA CIDADE</button>
+        <small id="controlNote">PC: WASD + rato · Android: joystick, arrastar para olhar e botão VISTA</small>
+      </div>
+    </div>
+    <div id="mobileControls">
+      <div id="joystick"><div id="stick"></div></div>
+      <div class="look-hint">ARRASTA PARA OLHAR</div>
+      <button id="runButton">CORRER</button>
+      <button id="interactButton">INTERAGIR</button>
+    </div>
+    <div id="bottomTip">Dica: aproxima-te do marcador dourado para concluir a primeira atividade.</div>
+  </div>
+  <script type="module" src="./js/game.js"></script>
+</body>
+</html>
